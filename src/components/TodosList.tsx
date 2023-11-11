@@ -68,7 +68,11 @@ export function TodosList() {
                   {!todo.done && <CircleIcon className="h-5 w-5 text-white" />}
                 </button>
 
-                <button type="button" onClick={() => removeTodo(todo.id)}>
+                <button
+                  type="button"
+                  aria-label="remover"
+                  onClick={() => removeTodo(todo.id)}
+                >
                   <Trash2Icon className="h-5 w-5 text-red-500 transition-colors hover:text-red-400" />
                 </button>
               </div>
