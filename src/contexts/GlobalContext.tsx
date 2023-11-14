@@ -11,9 +11,9 @@ import { IUser } from '../entities/IUser';
 
 interface IGlobalContextValue {
   user: IUser | null;
+  todos: ITodo[];
   login(): void;
   logout(): void;
-  todos: ITodo[];
   addTodo(title: string, author?: string): void;
   toggleTodoDone(todoId: number): void;
   removeTodo(todoId: number): void;
@@ -31,8 +31,8 @@ export function GlobalProvider({ children }: { children: React.ReactNode }) {
 
   const login = useCallback(() => {
     setLoggedUser({
-      email: 'mateus@jstack.com.br',
-      name: 'Mateus Silva',
+      email: 'matttalves@gmail.com',
+      name: 'Matheus Pereira',
     });
   }, []);
 
